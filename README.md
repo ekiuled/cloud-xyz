@@ -16,8 +16,6 @@
 
 Примеры входных данных лежат в папке `data`. Примеры запуска:
 
-`python3 cloud data/teapot_306.xyz -H -r 1 1.5 -o data/teapot_306_mod.xyz`
-
-`python3 cloud data/sphere_spiral_700.xyz -p -c`
-
-`python3 cloud data/helix_201.xyz -H 100 `
+- `python3 cloud data/teapot_306.xyz -H -r 1 1.5 -o data/teapot_306_mod.xyz`
+- `python3 cloud data/sphere_spiral_700.xyz -p -c`
+- `python3 cloud data/helix_201.xyz -H 100 `
