@@ -15,3 +15,12 @@ def hist(cloud: Cloud, bins: int) -> None:
 
 def erase(cloud: Cloud, low: float, high: float) -> Cloud:
     return list(filter(lambda point: not low <= point.z <= high, cloud))
+
+
+def visualize(cloud: Cloud) -> None:
+    xs, ys, zs = map(list, zip(*cloud))
+
+    fig = plt.figure(figsize=(10, 10))
+    ax = fig.add_subplot(111, projection='3d')
+    ax.scatter(xs, ys, zs, c=zs)
+    plt.show()

@@ -12,6 +12,9 @@ parser = argparse.ArgumentParser('cloud', formatter_class=formatter)
 parser.add_argument('-c', '--count',
                     action='store_true',
                     help='count points in the cloud')
+parser.add_argument('-p', '--plot',
+                    action='store_true',
+                    help='plot the cloud')
 parser.add_argument('-H', '--hist',
                     nargs='?', const=42, metavar='BINS', type=int,
                     help='plot a histogram')
@@ -33,6 +36,9 @@ if args.remove is not None:
 
 if args.count:
     print(count(cloud))
+
+if args.plot:
+    visualize(cloud)
 
 if args.hist is not None:
     hist(cloud, args.hist)
