@@ -26,4 +26,9 @@
 
 ## Docker
 
-Приложение также можно запустить в docker-контейнере (предварительно выполнив `docker build`). Только в таком случае будут проблемы с использованием `matplotlib` для построения гистограммы или визуализации облака.
+Приложение также можно запустить в docker-контейнере (предварительно выполнив `docker build`). Пример:
+
+```
+docker build -t cloudxyz .
+docker run --network host -e DISPLAY=$DISPLAY cloudxyz data/teapot_306.xyz -p
+```
